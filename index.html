@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Next Forty – Atelier for Conscious Leadership</title>
+  <meta name="description" content="The Next Forty — Atelier for Conscious Leadership. Leadership consulting, business growth, social impact. Bilingual (EN/ES) programs for organizations, small businesses, and immigrant entrepreneurs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --accent: #ff30af; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+    .ringy { box-shadow: 0 0 0 1px rgba(255,48,175,.35); }
+    .grad { background: radial-gradient(1000px 500px at 10% -10%, rgba(255,48,175,.15), transparent 60%), linear-gradient(180deg, rgba(2,6,23,.96), rgba(2,6,23,.98)); }
+    .badge { border: 1px solid rgba(255,48,175,.35); background: rgba(255,48,175,.08); }
+    .btn { background: var(--accent); }
+    .btn:hover { filter: brightness(1.05); }
+    a.link-magenta { color: var(--accent); }
+    a.link-magenta:hover { text-decoration: underline; }
+    .muted { color: rgb(148,163,184); font-size: 0.9rem; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <header class="grad">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between gap-6 py-6 px-6">
+      <a class="flex items-center gap-3" href="#">
+        <div>
+          <p class="text-sm tracking-widest uppercase" style="color: rgba(255,48,175,.9)">The Next Forty</p>
+          <p class="text-xs text-slate-400 i18n" data-en="Atelier for Conscious Leadership" data-es="Atelier de Liderazgo Consciente">Atelier for Conscious Leadership</p>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        <button id="langToggle" class="rounded-lg border border-slate-700 text-slate-200 text-xs px-3 py-1 hover:border-slate-500">EN / ES</button>
+        <a href="https://calendly.com/thenextforty-co/15-minute-meeting-clone" class="inline-flex items-center gap-2 rounded-xl btn text-white text-sm font-semibold px-4 py-2 transition i18n" data-en="Schedule Intro Call (15 min)" data-es="Agendar Intro (15 min)">Schedule Intro Call (15 min)</a>
+      </div>
+    </nav>
+    <section class="max-w-6xl mx-auto px-6 pb-20 pt-8">
+      <div class="max-w-3xl">
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+          <span class="i18n" data-en="The Next Forty — " data-es="The Next Forty — ">The Next Forty — </span>
+          <span class="i18n" data-en="Atelier for Conscious Leadership" data-es="Atelier de Liderazgo Consciente" style="color: var(--accent)">Atelier for Conscious Leadership</span>
+        </h1>
+        <p class="mt-5 text-lg md:text-xl text-slate-300 i18n"
+           data-en="We help organizations and small businesses align blueprints with integrity, grow with equity, and lead with awareness — building cultures that last the next forty years."
+           data-es="Ayudamos a organizaciones y pequeños negocios a alinear sus planos con integridad, crecer con equidad y liderar con conciencia — construyendo culturas que perduren los próximos cuarenta años.">
+           We help organizations and small businesses align blueprints with integrity...
+        </p>
+        <p class="mt-3 text-slate-300 i18n"
+           data-en="Our work spans business, entrepreneurship, social transformation, and education, supporting women in decision-making roles and underestimated leaders to transform vision into sustainable impact across their ecosystems."
+           data-es="Trabajamos en la intersección entre negocio, emprendimiento, transformación social y educación, acompañando a mujeres en posiciones de decisión y a líderes subestimadas para transformar su visión en impacto sostenible dentro de sus ecosistemas.">
+           Our work spans business, entrepreneurship, social transformation, and education...
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <span class="badge px-3 py-1 rounded-full text-xs" style="color: rgba(255,48,175,.95)">Leadership Consulting</span>
+          <span class="badge px-3 py-1 rounded-full text-xs" style="color: rgba(255,48,175,.95)">Business Growth</span>
+          <span class="badge px-3 py-1 rounded-full text-xs" style="color: rgba(255,48,175,.95)">Programs & Workshops</span>
+          <span class="badge px-3 py-1 rounded-full text-xs" style="color: rgba(255,48,175,.95)">Women in Decision</span>
+        </div>
+        <div class="mt-8 flex gap-4">
+          <a href="#programs" class="rounded-xl btn text-white font-semibold px-5 py-3 i18n" data-en="Explore Programs" data-es="Explorar Programas">Explore Programs</a>
+          <a href="#contact" class="rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-5 py-3 i18n" data-en="Contact" data-es="Contacto">Contact</a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <section id="interconnect" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold i18n" data-en="Where We Act & Interconnect" data-es="Dónde Actuamos e Interconectamos">Where We Act & Interconnect</h2>
+    <p class="mt-3 text-slate-300 max-w-3xl i18n"
+       data-en="We work across domains that constantly shape one another. This interconnected ecosystem is where we design leadership that transforms vision into sustainable impact."
+       data-es="Nuestro trabajo habita los espacios donde las disciplinas se entrelazan y se transforman mutuamente. Aquí diseñamos liderazgos que combinan conciencia, estrategia y acción.">
+       We work across domains that constantly shape one another...
+    </p>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="text-lg font-semibold i18n" data-en="Business ↔ Entrepreneurship" data-es="Negocios ↔ Emprendimiento">Business ↔ Entrepreneurship</h3>
+        <p class="mt-2 text-slate-300 i18n"
+           data-en="We operate at the intersection of business growth and entrepreneurship. Our work supports established organizations seeking transformation and entrepreneurs creating businesses from the ground up. These worlds often meet: entrepreneurial leaders bring fresh energy to corporations, while underestimated entrepreneurs grow resilient businesses with purpose and vision."
+           data-es="Apoyamos tanto a organizaciones que buscan transformarse como a emprendedoras que construyen desde cero. Porque hoy estos mundos están conectados: las líderes piensan como emprendedoras, y las emprendedoras crecen como líderes.">
+           We operate at the intersection of business growth and entrepreneurship...
+        </p>
+      </div>
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="text-lg font-semibold i18n" data-en="Entrepreneurship ↔ Social Transformation" data-es="Emprendimiento ↔ Transformación Social">Entrepreneurship ↔ Social Transformation</h3>
+        <p class="mt-2 text-slate-300 i18n"
+           data-en="The entrepreneurs we support are not only building enterprises, they are also opening pathways toward equity, dignity, and cultural change. Their impact goes beyond profit: they redefine success through inclusion, resilience, and the social impact they create in their homes, communities, and society at large."
+           data-es="Acompañamos a emprendedoras que no solo crean negocios, sino que también generan equidad, dignidad y transformación cultural con impacto real en hogares, comunidades y sociedad.">
+           The entrepreneurs we support are not only building enterprises...
+        </p>
+      </div>
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="text-lg font-semibold i18n" data-en="Social Transformation ↔ Education" data-es="Transformación Social ↔ Educación">Social Transformation ↔ Education</h3>
+        <p class="mt-2 text-slate-300 i18n"
+           data-en="Our programs and workshops are inherently educational spaces where knowledge meets wisdom, and lived experience deconstructs inherited narratives to open new ways of learning and leading."
+           data-es="Nuestros programas son espacios donde el conocimiento se encuentra con la sabiduría, y la experiencia vivida cuestiona narrativas heredadas para abrir nuevas formas de aprender y liderar.">
+           Our programs and workshops are inherently educational spaces...
+        </p>
+      </div>
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="text-lg font-semibold i18n" data-en="Education ↔ Business" data-es="Educación ↔ Negocios">Education ↔ Business</h3>
+        <p class="mt-2 text-slate-300 i18n"
+           data-en="Through education that blends knowledge, wisdom, and lived experience, business culture is reimagined — deconstructing old models and creating space for conscious leadership to thrive."
+           data-es="Cuando la educación conecta conocimiento, sabiduría y experiencia vivida, la cultura empresarial se reinventa — rompiendo viejos modelos y abriendo espacio para que el liderazgo consciente florezca.">
+           Through education that blends knowledge, wisdom, and lived experience...
+        </p>
+      </div>
+    </div>
+    <div class="mt-10 text-slate-200 font-medium i18n"
+         data-en="This is how we build cultures that endure and thrive for the next forty years."
+         data-es="Así construimos culturas que perduran y prosperan los próximos cuarenta años.">
+         This is how we build cultures that endure and thrive for the next forty years.
+    </div>
+  </section>
+
+  <section id="programs" class="bg-slate-900/40 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold i18n" data-en="Programs & Workshops" data-es="Programas y Talleres">Programs & Workshops</h2>
+      <p class="mt-3 text-slate-300 max-w-3xl i18n"
+         data-en="We design hands-on spaces for real change — where reflection turns into strategy and awareness becomes action. Accessible, dialogue-based offerings for executives, organizations, immigrant entrepreneurs, and underestimated leaders. Available in English and Spanish."
+         data-es="Diseñamos espacios prácticos para el cambio real — donde la reflexión se convierte en estrategia y la conciencia en acción. Ofrecimientos accesibles y basados en el diálogo para ejecutivas, organizaciones, emprendedoras inmigrantes y liderazgos subestimados. Disponibles en inglés y español.">
+         We design hands-on spaces for real change...
+      </p>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl p-6 bg-slate-950/60 ringy">
+          <h3 class="text-lg font-semibold i18n" data-en="For Organizations & Decision-Makers" data-es="Para Organizaciones y quienes toman Decisiones">For Organizations & Decision-Makers</h3>
+          <ul class="mt-3 space-y-3 text-slate-300 text-sm list-disc pl-5">
+            <li class="i18n" data-en="Executive Leadership Labs — immersive, reflective sessions that strengthen conscious leadership, collaboration, and decision-making with purpose." data-es="Laboratorios de Liderazgo Ejecutivo — sesiones inmersivas y reflexivas que fortalecen el liderazgo consciente, la colaboración y la toma de decisiones con propósito.">Executive Leadership Labs — immersive, reflective sessions...</li>
+            <li class="i18n" data-en="Organizational Culture Workshops — spaces to align teams around equity, creativity, and shared vision, shaping organizations that listen and evolve." data-es="Talleres de Cultura Organizacional — espacios para alinear equipos alrededor de la equidad, la creatividad y una visión compartida; organizaciones que escuchan y evolucionan.">Organizational Culture Workshops — spaces to align teams...</li>
+            <li class="i18n" data-en="Custom Trainings — tailored experiences that bridge business objectives with cultural awareness, designed for real transformation from the inside out." data-es="Capacitaciones Personalizadas — experiencias a medida que integran objetivos empresariales con conciencia cultural; transformación real desde adentro.">Custom Trainings — tailored experiences...</li>
+          </ul>
+          <a href="#contact" class="inline-block mt-4 link-magenta i18n" data-en="Book a Workshop →" data-es="Agendar un Taller →">Book a Workshop →</a>
+        </div>
+        <div class="rounded-2xl p-6 bg-slate-950/60 ringy">
+          <h3 class="text-lg font-semibold i18n" data-en="For Entrepreneurs & Immigrant Women Leaders" data-es="Para Emprendedoras y Mujeres Líderes Inmigrantes">For Entrepreneurs & Immigrant Women Leaders</h3>
+          <ul class="mt-3 space-y-3 text-slate-300 text-sm list-disc pl-5">
+            <li class="i18n" data-en="Business Basics — practical tools in sales, branding, and finance taught through the lens of authenticity, equity, and self-trust." data-es="Fundamentos de Negocio — herramientas prácticas en ventas, marca y finanzas enseñadas desde la autenticidad, la equidad y la autoconfianza.">Business Basics — practical tools...</li>
+            <li class="i18n" data-en="Entrepreneurship as Social Change — for founders who build not just businesses, but movements that redefine power and dignity." data-es="Emprender como Cambio Social — para fundadoras que construyen no solo negocios, sino movimientos que redefinen poder y dignidad.">Entrepreneurship as Social Change — for founders...</li>
+            <li class="i18n" data-en="Hands-on Collaboration (EN/ES) — bilingual peer groups where leadership and business growth are practiced through real collaboration and shared wisdom." data-es="Colaboración Práctica (EN/ES) — grupos bilingües donde liderazgo y crecimiento se practican mediante colaboración real y sabiduría compartida.">Hands-on Collaboration (EN/ES) — bilingual peer groups...</li>
+            <li class="i18n" data-en="Atelier Sessions — spaces where leaders and entrepreneurs turn reflection into action through experimentation and collaboration. Each session integrates Pomodoro time design, intentional networking, and collective problem-solving to build focus, structure, and meaningful progress." data-es="Sesiones de Atelier — espacios donde líderes y emprendedoras convierten la reflexión en acción mediante experimentación y colaboración. Integra Pomodoro, networking intencional y resolución colectiva de desafíos.">Atelier Sessions — spaces where leaders and entrepreneurs...</li>
+          </ul>
+          <a href="#contact" class="inline-block mt-4 link-magenta i18n" data-en="Join a Session →" data-es="Únete a una Sesión →">Join a Session →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold i18n" data-en="Our Team & Allies in the Atelier" data-es="Nuestro Equipo y Aliadas del Atelier">Our Team & Allies in the Atelier</h2>
+    <p class="mt-3 text-slate-300 max-w-3xl i18n"
+       data-en="At The Next Forty, leadership is not built in isolation; it is co-created in community. Our Atelier is grounded in the deconstruction of inherited narratives, the awakening of women in power, and the pursuit of equity in business growth. We practice the art of turning vision into sustainable impact. Each ally embodies a facet of this commitment — together, we design cultures that endure and thrive for the next forty years."
+       data-es="En The Next Forty, el liderazgo no se construye en aislamiento; se co-crea en comunidad. Nuestro Atelier se enraíza en la deconstrucción de narrativas heredadas, el despertar de las mujeres en el poder y la búsqueda de la equidad en el crecimiento empresarial. Practicamos el arte de convertir la visión en impacto sostenible. Cada aliada encarna una faceta de este compromiso — juntas diseñamos culturas que prosperan los próximos cuarenta años.">
+       At The Next Forty, leadership is not built in isolation...
+    </p>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="font-semibold">Tania Figueroa — <span class="i18n" data-en="Founder, Leadership, Business Growth & Social Impact Consultant" data-es="Fundadora, Consultora en Liderazgo, Crecimiento e Impacto Social">Founder, Leadership, Business Growth & Social Impact Consultant</span></h3>
+        <p class="mt-2 text-sm text-slate-300 i18n"
+           data-en="Tania Figueroa has over 20 years of experience across the nonprofit and private sectors in advertising, teaching, and community organizing. With a Master’s in Consciousness and Transformative Studies, she integrates emotional intelligence, conscious leadership, and equity practices into her work. At Prospera, she supported Latina immigrant women entrepreneurs to build sustainable businesses and expand their leadership — experience she now carries into The Next Forty to help organizations, small businesses, and underestimated leaders grow with purpose."
+           data-es="Con más de 20 años de experiencia en sectores privado y sin fines de lucro, Tania ha trabajado en publicidad, docencia y organización comunitaria. Posee una Maestría en Estudios de la Conciencia y la Transformación, integrando inteligencia emocional, liderazgo consciente y equidad en su trabajo. En Prospera acompañó a mujeres inmigrantes latinas a crear negocios sostenibles, experiencia que hoy lleva a The Next Forty para ayudar a liderazgos y organizaciones a crecer con propósito.">
+           Tania Figueroa has over 20 years of experience...
+        </p>
+        <a class="inline-block mt-3 link-magenta text-sm" href="https://www.linkedin.com/in/taniafigueroa/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      </div>
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="font-semibold">Catalina Luna — <span class="i18n" data-en="Ally & Graphic Designer" data-es="Aliada y Diseñadora Gráfica">Ally & Graphic Designer</span></h3>
+        <p class="mt-2 text-sm text-slate-300 i18n"
+           data-en="Catalina brings the visual language of justice and identity into the Atelier. As a graphic designer, she translates the voices of underestimated leaders into design that is both powerful and accessible. She ensures that every message carries the clarity, beauty, and dignity women in power deserve."
+           data-es="Catalina lleva el lenguaje visual de la justicia y la identidad al corazón del Atelier. Como diseñadora gráfica, traduce las voces de líderes subestimadas en un diseño poderoso y accesible, asegurando claridad, belleza y dignidad en cada mensaje.">
+           Catalina brings the visual language of justice and identity...
+        </p>
+        <a class="inline-block mt-3 link-magenta text-sm" href="https://www.linkedin.com/in/catalinalunaf/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-slate-900/60 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-2xl md:text-3xl font-bold i18n"
+          data-en="Anchor leadership that lasts"
+          data-es="Anclar un liderazgo que perdura">Anchor leadership that lasts</h2>
+      <p class="mt-3 text-slate-300 max-w-3xl i18n"
+         data-en="We work across business, entrepreneurship, social transformation, and education — domains that constantly shape one another. In this interconnected ecosystem we design in community leadership that transforms vision into sustainable impact."
+         data-es="Trabajamos en negocio, emprendimiento, transformación social y educación — dominios que se moldean mutuamente. En este ecosistema interconectado diseñamos en comunidad un liderazgo que transforma la visión en impacto sostenible.">
+         We work across business, entrepreneurship, social transformation, and education...
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://calendly.com/thenextforty-co/40min" class="rounded-xl btn text-white font-semibold px-5 py-3 i18n" data-en="Start the Conversation" data-es="Iniciar la Conversación">Start the Conversation</a>
+        <a href="#programs" class="rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-5 py-3 i18n" data-en="Explore Programs" data-es="Explorar Programas">Explore Programs</a>
+      </div>
+      <div class="mt-10">
+        <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+          <div class="grid md:grid-cols-2 gap-6">
+            <label class="text-sm i18n" data-en="Name" data-es="Nombre">Name
+              <input class="mt-2 w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2" type="text" placeholder="Your name / Tu nombre" /></label>
+            <label class="text-sm i18n" data-en="Email" data-es="Correo">Email
+              <input class="mt-2 w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2" type="email" placeholder="you@domain.com" /></label>
+          </div>
+          <label class="text-sm block mt-6 i18n" data-en="Message" data-es="Mensaje">Message
+            <textarea class="mt-2 w-full rounded-lg bg-slate-950 border border-slate-800 px-3 py-2 h-32" placeholder="What would you like to build together? / ¿Qué te gustaría construir juntas/os?"></textarea></label>
+          <div class="mt-6">
+            <a href="https://calendly.com/thenextforty-co/15-minute-meeting-clone" class="inline-block rounded-xl btn text-white font-semibold px-5 py-3 i18n" data-en="Schedule via Calendly" data-es="Agendar vía Calendly">Schedule via Calendly</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-900/60 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-10 text-sm text-slate-400 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+      <div>© <span id="yr"></span> The Next Forty. <span class="i18n" data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-slate-200 i18n" data-en="Privacy" data-es="Privacidad">Privacy</a>
+        <a href="#" class="hover:text-slate-200 i18n" data-en="Terms" data-es="Términos">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('langToggle');
+    const nodes = () => Array.from(document.querySelectorAll('.i18n'));
+    let current = 'en';
+    function applyLang(lang) {
+      nodes().forEach(el => {
+        const txt = el.dataset[lang];
+        if (typeof txt !== 'undefined') el.textContent = txt;
+      });
+      current = lang;
+      document.documentElement.lang = lang;
+      toggle.textContent = lang === 'en' ? 'EN / ES' : 'ES / EN';
+    }
+    toggle.addEventListener('click', () => applyLang(current === 'en' ? 'es' : 'en'));
+    applyLang('en');
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
