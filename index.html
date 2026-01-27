@@ -20,6 +20,8 @@
     a.link-magenta { color: var(--accent); }
     a.link-magenta:hover { text-decoration: underline; }
     .muted { color: rgb(148,163,184); font-size: 0.9rem; }
+    .lang-es-only { display: none; }
+    .lang-en-only { display: none; }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -58,7 +60,7 @@
           <span class="badge px-3 py-1 rounded-full text-xs" style="color: rgba(255,48,175,.95)">Programs & Workshops</span>
           <span class="badge px-3 py-1 rounded-full text-xs" style="color: rgba(255,48,175,.95)">Women in Decision</span>
         </div>
-        <div class="mt-8 flex gap-4">
+        <div class="mt-8 flex gap-4 flex-wrap items-center">
           <a href="#programs" class="rounded-xl btn text-white font-semibold px-5 py-3 i18n" data-en="Explore Programs" data-es="Explorar Programas">Explore Programs</a>
           <a href="#contact" class="rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-5 py-3 i18n" data-en="Contact" data-es="Contacto">Contact</a>
         </div>
@@ -153,7 +155,7 @@
        data-es="En The Next Forty, el liderazgo no se construye en aislamiento; se co-crea en comunidad. Nuestro Atelier se enraíza en la deconstrucción de narrativas heredadas, el despertar de las mujeres en el poder y la búsqueda de la equidad en el crecimiento empresarial. Practicamos el arte de convertir la visión en impacto sostenible. Cada aliada encarna una faceta de este compromiso — juntas diseñamos culturas que prosperan los próximos cuarenta años.">
        At The Next Forty, leadership is not built in isolation...
     </p>
-    <div class="mt-8 grid md:grid-cols-2 gap-6">
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
         <h3 class="font-semibold">Tania Figueroa — <span class="i18n" data-en="Founder, Leadership, Business Growth & Social Impact Consultant" data-es="Fundadora, Consultora en Liderazgo, Crecimiento e Impacto Social">Founder, Leadership, Business Growth & Social Impact Consultant</span></h3>
         <p class="mt-2 text-sm text-slate-300 i18n"
@@ -162,6 +164,15 @@
            Tania Figueroa has over 20 years of experience...
         </p>
         <a class="inline-block mt-3 link-magenta text-sm" href="https://www.linkedin.com/in/taniafigueroa/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+      </div>
+      <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
+        <h3 class="font-semibold">Bea Vallejo — <span class="i18n" data-en="Ally | Life & Career Coach (Intercultural Transitions)" data-es="Aliada | Coach de Vida y Carrera (Transiciones Interculturales)">Ally | Life & Career Coach (Intercultural Transitions)</span></h3>
+        <p class="mt-2 text-sm text-slate-300 i18n"
+           data-en="Bea works with women and underrepresented leaders navigating intercultural transitions, where personal identity, work, and leadership evolve at the same time. She helps bring clarity, focus, and structure to complex moments, supporting decisions that are both strategic and sustainable. Her work centers on practical systems: time and energy management, realistic goal-setting, and habits that support long-term growth. Bea also supports clients in understanding and navigating U.S. workplace culture, including communication norms, pace, expectations, and accountability. Her approach integrates productivity with self-awareness, allowing ambition and wellbeing to coexist. Rather than pushing for speed, she emphasizes alignment and conscious progress. Within The Next Forty, Bea strengthens the bridge between reflection and execution. Her contribution supports leadership that is intentional, grounded, and built to last."
+           data-es="Bea acompaña a mujeres y líderes subrepresentadas en transiciones interculturales, donde identidad, trabajo y liderazgo se transforman al mismo tiempo. Apoya procesos de claridad, foco y estructura en momentos complejos, facilitando decisiones estratégicas y sostenibles. Su trabajo se basa en sistemas prácticos: gestión del tiempo y la energía, objetivos realistas y hábitos orientados al crecimiento a largo plazo. También acompaña la comprensión de la cultura laboral en EE. UU., incluyendo comunicación, ritmo, expectativas y responsabilidad. Su enfoque integra productividad y conciencia personal, permitiendo que la ambición conviva con el bienestar. Más que acelerar procesos, prioriza la alineación y el avance consciente. En The Next Forty, Bea refuerza el puente entre reflexión y acción. Su aporte sostiene un liderazgo intencional, humano y duradero.">
+           Bea works with women and underrepresented leaders navigating intercultural transitions, where personal identity, work, and leadership evolve at the same time...
+        </p>
+        <a class="inline-block mt-3 link-magenta text-sm" href="https://www.linkedin.com/in/bea-vallejo/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
       </div>
       <div class="rounded-2xl p-6 bg-slate-900/60 ringy">
         <h3 class="font-semibold">Catalina Luna — <span class="i18n" data-en="Ally & Graphic Designer" data-es="Aliada y Diseñadora Gráfica">Ally & Graphic Designer</span></h3>
@@ -185,9 +196,10 @@
          data-es="Trabajamos en negocio, emprendimiento, transformación social y educación — dominios que se moldean mutuamente. En este ecosistema interconectado diseñamos en comunidad un liderazgo que transforma la visión en impacto sostenible.">
          We work across business, entrepreneurship, social transformation, and education...
       </p>
-      <div class="mt-6 flex gap-4">
+      <div class="mt-6 flex gap-4 flex-wrap items-center">
         <a href="https://thenextforty-co.systeme.io/discoverycall" class="rounded-xl btn text-white font-semibold px-5 py-3 i18n" data-en="Start the Conversation" data-es="Iniciar la Conversación">Start the Conversation</a>
         <a href="#programs" class="rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-5 py-3 i18n" data-en="Explore Programs" data-es="Explorar Programas">Explore Programs</a>
+        <a href="https://thenextforty-co.systeme.io/masverdadymenosruido" class="rounded-xl border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-5 py-3 lang-es-only">Newsletter todos los martes</a>
       </div>
       <div class="mt-10">
         <form action="https://formspree.io/f/xdkwvqkv" method="POST">
@@ -235,6 +247,12 @@
         const txt = el.dataset[lang];
         if (typeof txt !== 'undefined') el.textContent = txt;
       });
+
+      // toggle language-specific elements
+      const esOnly = document.querySelectorAll('.lang-es-only');
+      const enOnly = document.querySelectorAll('.lang-en-only');
+      esOnly.forEach(el => { el.style.display = lang === 'es' ? 'inline-flex' : 'none'; });
+      enOnly.forEach(el => { el.style.display = lang === 'en' ? 'inline-flex' : 'none'; });
 
       // update placeholders and aria-labels for inputs/textareas using data-en-placeholder / data-es-placeholder
       const placeholderables = Array.from(document.querySelectorAll('[data-en-placeholder],[data-es-placeholder]'));
