@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liderar desde Aquí — Next Forty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  color: #f1f5f9;
+  background: #020617;
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ── TOKENS ── */
+:root {
+  --accent:  #ff30af;
+  --accent-dk:#e01998;
+  --terra:   var(--accent);
+  --terra-dk:var(--accent-dk);
+  --gold:    var(--accent);
+  --dark:    #020617;
+  --mid:     #cbd5e1;
+  --light:   #94a3b8;
+  --sand:    #334155;
+  --blush:   #f1f5f9;
+  --cream:   rgba(15,23,42,0.42);
+  --olive:   var(--accent);
+  --border:  #1e293b;
+  --white:   rgba(15,23,42,0.6);
+  --radius:  10px;
+  --radius-lg: 14px;
+}
+
+.serif { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+
+/* ── LAYOUT ── */
+.container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.section    { padding: 64px 0; background: var(--dark); }
+.section-alt { padding: 64px 0; background: var(--cream); }
+
+/* ── TYPOGRAPHY ── */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: rgba(255,48,175,0.95);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+}
+h1.display {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 800;
+  line-height: 1.12;
+  color: var(--blush);
+  margin-bottom: 12px;
+}
+h1.display em { color: var(--terra); font-style: italic; }
+h2.section-title {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--blush);
+  margin-bottom: 14px;
+}
+h2.section-title-light {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--blush);
+  margin-bottom: 10px;
+}
+.lead { font-size: 15px; color: var(--mid); line-height: 1.75; margin-bottom: 8px; }
+.lead-light { font-size: 15px; color: var(--light); line-height: 1.75; margin-bottom: 8px; }
+
+/* ── BUTTONS ── */
+.btn {
+  display: inline-block;
+  padding: 17px 32px;
+  border-radius: var(--radius);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  transition: background 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dk); color: #fff; }
+.btn-full { display: block; width: 100%; }
+.btn-sm { padding: 12px 24px; font-size: 14px; }
+
+/* ── DIVIDER ── */
+hr.divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+
+/* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+#hero {
+  background: radial-gradient(1000px 500px at 10% -10%, rgba(255,48,175,.15), transparent 60%), linear-gradient(180deg, rgba(2,6,23,.96), rgba(2,6,23,.98));
+  padding: 64px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 340px; height: 340px;
+  border-radius: 50%;
+  border: 56px solid rgba(255,48,175,0.10);
+  pointer-events: none;
+}
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 36px solid rgba(255,48,175,0.07);
+  pointer-events: none;
+}
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 28px;
+}
+.hero-tag {
+  font-size: 12px;
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,48,175,0.35);
+  color: var(--light);
+  background: rgba(255,48,175,0.08);
+}
+.price-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.price-main {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--blush);
+  line-height: 1;
+}
+.price-old {
+  font-size: 20px;
+  color: var(--light);
+  text-decoration: line-through;
+}
+.price-badge {
+  font-size: 11px;
+  background: rgba(255,48,175,0.14);
+  color: var(--accent);
+  padding: 5px 11px;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+.hero-note {
+  font-size: 12px;
+  color: var(--light);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   FOR WHO
+══════════════════════════════════════════ */
+.for-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+.for-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+}
+.for-dot-wrap {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: rgba(255,48,175,0.08);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
+.for-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--terra); }
+.for-title { font-size: 14px; font-weight: 500; color: var(--blush); margin-bottom: 6px; }
+.for-desc  { font-size: 13px; color: var(--mid); line-height: 1.55; }
+
+/* ══════════════════════════════════════════
+   MODULES
+══════════════════════════════════════════ */
+.mod-list { margin-top: 28px; }
+.mod-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.mod-item:last-child { border-bottom: none; }
+.mod-num {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--sand);
+  min-width: 44px;
+  line-height: 1;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+.mod-week {
+  font-size: 10px;
+  color: var(--terra);
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.mod-title {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blush);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.mod-desc { font-size: 14px; color: var(--mid); line-height: 1.6; }
+
+/* ══════════════════════════════════════════
+   WHAT'S INCLUDED
+══════════════════════════════════════════ */
+.includes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+.include-item {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.check-circle {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--olive);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.check-inner { width: 7px; height: 7px; border-radius: 50%; background: #EAF3DE; }
+.include-text { font-size: 13px; color: var(--blush); line-height: 1.5; }
+
+/* ══════════════════════════════════════════
+   INSTRUCTOR
+══════════════════════════════════════════ */
+#instructor { background: var(--dark); padding: 64px 0; }
+.instructor-card {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.instructor-avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: var(--terra);
+  display: flex; align-items: center; justify-content: center;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 26px;
+  color: #fff;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.instructor-name {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 20px;
+  color: var(--blush);
+  margin-bottom: 4px;
+}
+.instructor-role { font-size: 12px; color: var(--gold); margin-bottom: 14px; }
+.instructor-bio  { font-size: 14px; color: var(--light); line-height: 1.7; }
+
+/* ══════════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════════ */
+.testimonial {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  margin-top: 14px;
+}
+.testimonial-quote {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--blush);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+.testimonial-footer { display: flex; align-items: center; gap: 12px; }
+.test-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--sand);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--mid);
+  flex-shrink: 0;
+}
+.test-name { font-size: 14px; font-weight: 500; color: var(--blush); }
+.test-biz  { font-size: 12px; color: var(--mid); }
+
+/* ══════════════════════════════════════════
+   FAQ
+══════════════════════════════════════════ */
+.faq-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-size: 15px; font-weight: 500; color: var(--blush); margin-bottom: 9px; }
+.faq-a { font-size: 14px; color: var(--mid); line-height: 1.7; }
+
+/* ══════════════════════════════════════════
+   REGISTER SECTION (use with systeme.io form embed)
+══════════════════════════════════════════ */
+#registro { background: var(--dark); padding: 64px 0; }
+.register-box {
+  background: rgba(15,23,42,0.6);
+  border: 1px solid rgba(255,48,175,0.35);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+.form-note {
+  font-size: 12px;
+  color: var(--mid);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* ── Native form styles (fallback if not using systeme.io embed) ── */
+.field-wrap { margin-bottom: 14px; }
+.field-label {
+  display: block;
+  font-size: 12px;
+  color: var(--light);
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.field-input,
+.field-select {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--blush);
+  font-size: 14px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  transition: border-color 0.15s;
+}
+.field-input::placeholder { color: var(--light); }
+.field-input:focus,
+.field-select:focus { outline: none; border-color: var(--accent); }
+.field-select { appearance: none; }
+.field-select option { background: #020617; color: var(--blush); }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+
+.guarantee-box {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 16px;
+}
+.guarantee-icon { font-size: 20px; color: var(--gold); flex-shrink: 0; }
+.guarantee-text { font-size: 12px; color: var(--light); line-height: 1.55; }
+.guarantee-text strong { color: var(--gold); font-weight: 500; }
+
+/* ══════════════════════════════════════════
+   STICKY BAR
+══════════════════════════════════════════ */
+#sticky {
+  position: sticky;
+  bottom: 0;
+  background: rgba(2,6,23,0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--border);
+  padding: 14px 24px;
+  z-index: 999;
+}
+.sticky-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.sticky-label { font-size: 14px; font-weight: 500; color: var(--blush); }
+.sticky-price { font-size: 12px; color: var(--gold); margin-top: 2px; }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+@media (max-width: 600px) {
+  .section, .section-alt { padding: 48px 0; }
+  #hero, #instructor, #registro { padding: 48px 0; }
+  .for-grid, .includes-grid { grid-template-columns: 1fr; }
+  .instructor-card { flex-direction: column; }
+  .sticky-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .register-box { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+  HERO
+══════════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <span class="eyebrow">Next Forty · Taller online</span>
+    <h1 class="display">Liderar<br/><em>desde aquí</em></h1>
+    <p class="lead-light">Para mujeres inmigrantes que ya están liderando su negocio — y que nadie se los había dicho así.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">4 semanas</span>
+      <span class="hero-tag">En español</span>
+      <span class="hero-tag">Grabado + sesión en vivo</span>
+      <span class="hero-tag">Diario de trabajo incluido</span>
+    </div>
+    <div class="price-row">
+      <span class="price-main">$79</span>
+      <span class="price-old">$99</span>
+      <span class="price-badge">Early bird · 20 cupos</span>
+    </div>
+    <a href="#registro" class="btn btn-primary btn-full">Quiero mi lugar →</a>
+    <p class="hero-note">Acceso inmediato</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  PARA QUIÉN
+══════════════════════════════════════ -->
+<section class="section-alt">
+  <div class="container">
+    <span class="eyebrow">Este taller es para ti</span>
+    <h2 class="section-title">Si reconoces alguna de estas frases,<br/>llevas tiempo esperando esto.</h2>
+    <div class="for-grid">
+      <div class="for-card">
+        <div class="for-dot-wrap"><div class="for-dot"></div></div>
+        <p class="for-title">Tienes un negocio que funciona</p>
+        <p class="for-desc">Pero funciona porque tú estás en todo — y eso ya te cansó.</p>
+      </div>
+      <div class="for-card">
+        <div class="for-dot-wrap"><div class="for-dot"></div></div>
+        <p class="for-title">Sabes lo que quieres</p>
+        <p class="for-desc">Pero nadie te enseñó cómo pedírselo a tu equipo, tu socia o tu cliente.</p>
+      </div>
+      <div class="for-card">
+        <div class="for-dot-wrap"><div class="for-dot"></div></div>
+        <p class="for-title">Ya líderas — sin llamarlo así</p>
+        <p class="for-desc">Cada día tomas decisiones difíciles. Solo nadie te dijo que eso se llama liderazgo.</p>
+      </div>
+      <div class="for-card">
+        <div class="for-dot-wrap"><div class="for-dot"></div></div>
+        <p class="for-title">Eres inmigrante y empresaria</p>
+        <p class="for-desc">Y sabes que los cursos de negocio no fueron pensados para alguien como tú.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  MÓDULOS
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Currículo del taller</span>
+    <h2 class="section-title">4 semanas. 4 módulos.<br/>Un sistema que no depende de tu ánimo.</h2>
+    <div class="mod-list">
+      <div class="mod-item">
+        <div class="mod-num">01</div>
+        <div>
+          <p class="mod-week">Semana 1</p>
+          <p class="mod-title">¿Qué has creído que es liderar?</p>
+          <p class="mod-desc">Antes de aprender algo nuevo, miramos lo que ya crees. Dónde lo aprendiste. Qué te está costando. Sin juicio — con expansión y honestidad.</p>
+        </div>
+      </div>
+      <div class="mod-item">
+        <div class="mod-num">02</div>
+        <div>
+          <p class="mod-week">Semana 2</p>
+          <p class="mod-title">Liderazgo que no parece liderazgo</p>
+          <p class="mod-desc">Nombramos lo que ya haces. Construimos autoridad sobre tu propia experiencia. Lo que no tiene nombre no puede crecer.</p>
+        </div>
+      </div>
+      <div class="mod-item">
+        <div class="mod-num">03</div>
+        <div>
+          <p class="mod-week">Semana 3</p>
+          <p class="mod-title">Liderar según la relación</p>
+          <p class="mod-desc">Scripts reales para tu equipo, tus clientes y tu socia. La conversación que llevas semanas posponiendo — la preparamos y la tenemos esta semana.</p>
+        </div>
+      </div>
+      <div class="mod-item">
+        <div class="mod-num">04</div>
+        <div>
+          <p class="mod-week">Semana 4</p>
+          <p class="mod-title">El sistema que sostiene</p>
+          <p class="mod-desc">3 rituales. 1 decisión de delegación. Un experimento de 14 días con métrica real. Sales con algo que vas a hacer diferente mañana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  INCLUYE
+══════════════════════════════════════ -->
+<section class="section-alt">
+  <div class="container">
+    <span class="eyebrow">Lo que incluye</span>
+    <h2 class="section-title">Todo lo que necesitas para pasar de la claridad a la acción.</h2>
+    <div class="includes-grid">
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">4 módulos en video — míralo a tu ritmo</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">4 sesiones en vivo de Q&amp;A con la instructora</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">Diario de liderazgo PDF — uno por módulo</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">Scripts para clientes difíciles, cambios de alcance y objeciones de precio</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">Comunidad privada con todas las participantes</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">Certificado de finalización Next Forty</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">Acceso a grabaciones por 6 meses</p>
+      </div>
+      <div class="include-item">
+        <div class="check-circle"><div class="check-inner"></div></div>
+        <p class="include-text">Plan de 14 días personalizado con métrica propia</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  INSTRUCTORA
+══════════════════════════════════════ -->
+<section id="instructor">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">Tu instructora</span>
+    <h2 class="section-title-light">Una voz que conoce el camino desde adentro.</h2>
+    <p class="lead-light">Este taller nació de mentoría real con mujeres inmigrantes que construyen negocios en condiciones que los libros de gestión no contemplan.</p>
+    <div class="instructor-card">
+      <div class="instructor-avatar">NF</div>
+      <div>
+        <p class="instructor-name">Next Forty</p>
+        <p class="instructor-role">Mentoría para mujeres empresarias inmigrantes</p>
+        <p class="instructor-bio">Directa y cálida. Estratégica y práctica. Inspiradora cuando hace falta. Y siempre, siempre desde la experiencia de lo que significa construir un negocio en un país que no era el tuyo — con un idioma que todavía estás haciendo tuyo, con un equipo que depende de ti, y con la certeza de que tienes más de lo que crees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  TESTIMONIOS
+══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Lo que dicen</span>
+    <h2 class="section-title">Las palabras de quienes ya dieron el paso.</h2>
+    <div class="testimonial">
+      <p class="testimonial-quote">"Llegué pensando que liderazgo era para otras personas. Salí sabiendo que lo que hacía todos los días en mi negocio ya tenía nombre — y que podía hacerlo mejor."</p>
+      <div class="testimonial-footer">
+        <div class="test-avatar">LR</div>
+        <div>
+          <p class="test-name">Lupita R.</p>
+          <p class="test-biz">Dueña, Supreme Rooter &amp; Plumbing · Los Ángeles</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p class="testimonial-quote">"La conversación que tuve con mi técnico en la semana 3 fue la que debí haber tenido hace dos años. Me dio las palabras exactas para decir lo que necesitaba."</p>
+      <div class="testimonial-footer">
+        <div class="test-avatar">MV</div>
+        <div>
+          <p class="test-name">María V.</p>
+          <p class="test-biz">Dueña, servicio de limpieza · Houston</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  FAQ
+══════════════════════════════════════ -->
+<section class="section-alt">
+  <div class="container">
+    <span class="eyebrow">Preguntas frecuentes</span>
+    <h2 class="section-title">Todo lo que necesitas saber antes de inscribirte.</h2>
+    <div style="margin-top: 24px;">
+      <div class="faq-item">
+        <p class="faq-q">¿Necesito experiencia previa en liderazgo o gestión?</p>
+        <p class="faq-a">No. Este taller empieza desde donde estás hoy — sin asumir que has leído ningún libro ni tomado ningún curso. Tu experiencia real es suficiente punto de partida.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿Qué tipo de negocio necesito tener?</p>
+        <p class="faq-a">Cualquier negocio de servicios propio: plomería, limpieza, cuidado, construcción, belleza, catering. Lo que importa es que tengas equipo o clientes que liderar.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿Cuánto tiempo por semana necesito dedicar?</p>
+        <p class="faq-a">Al menos 3–4 horas: 1 hora de video + 1 hora de trabajo personal + la sesión en vivo. Diseñado para mujeres que ya están muy ocupadas.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿Qué pasa si no puedo asistir a alguna sesión en vivo?</p>
+        <p class="faq-a">Todas las sesiones quedan grabadas y disponibles en la plataforma. Puedes enviar tus preguntas de antemano y la instructora las responde en la sesión.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿Hay garantía de devolución?</p>
+        <p class="faq-a">Sí. Si en los primeros 7 días sientes que el taller no es para ti, te regresamos el dinero completo — sin preguntas y sin drama.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">¿El precio sube después del lanzamiento?</p>
+        <p class="faq-a">Sí. El precio de early bird ($79) es para las primeras 20 inscripciones. Después sube a $99. No es urgencia artificial — son los cupos reales del grupo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ══════════════════════════════════════
+  REGISTRO
+  ─────────────────────────────────────
+  INSTRUCCIONES SYSTEME.IO:
+  Borra el bloque "form-fallback" de abajo
+  y pega en su lugar el código de embed de
+  tu formulario/order form de systeme.io.
+  Mantén el resto de la sección intacto.
+══════════════════════════════════════ -->
+<section id="registro">
+  <div class="container">
+    <span class="eyebrow" style="color: var(--gold);">Inscripción</span>
+    <h2 class="section-title-light">Tu lugar te está esperando.</h2>
+    <p class="lead-light" style="margin-bottom: 28px;">Completa el formulario y recibes acceso inmediato a la plataforma y al Diario de Liderazgo PDF.</p>
+
+    <div class="register-box">
+
+      <!-- ▼▼▼ PEGA AQUÍ TU EMBED DE SYSTEME.IO ▼▼▼ -->
+      <!-- Ejemplo: <script src="https://systeme.io/..."></script> -->
+      <!-- ó el iframe que te da systeme.io al publicar el order form -->
+
+      <!-- FORMULARIO DE EJEMPLO — borra esto cuando tengas el embed de systeme.io -->
+      <div id="form-fallback">
+        <div class="two-col">
+          <div class="field-wrap">
+            <label class="field-label">Nombre</label>
+            <input type="text" class="field-input" placeholder="Tu nombre">
+          </div>
+          <div class="field-wrap">
+            <label class="field-label">Apellido</label>
+            <input type="text" class="field-input" placeholder="Tu apellido">
+          </div>
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Correo electrónico</label>
+          <input type="email" class="field-input" placeholder="tu@correo.com">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">WhatsApp (opcional — para la comunidad)</label>
+          <input type="tel" class="field-input" placeholder="+1 555 000 0000">
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">¿Qué tipo de negocio tienes?</label>
+          <select class="field-select">
+            <option value="">Selecciona una opción</option>
+            <option>Plomería o servicios del hogar</option>
+            <option>Limpieza o mantenimiento</option>
+            <option>Cuidado (personas o animales)</option>
+            <option>Belleza o estética</option>
+            <option>Comida o catering</option>
+            <option>Construcción o remodelación</option>
+            <option>Otro servicio</option>
+          </select>
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">¿Cómo te enteraste del taller?</label>
+          <select class="field-select">
+            <option value="">Selecciona una opción</option>
+            <option>Instagram</option>
+            <option>Una amiga me lo recomendó</option>
+            <option>Facebook</option>
+            <option>WhatsApp</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <a href="#" class="btn btn-primary btn-full" style="margin-top: 6px;">
+          Inscribirme ahora — $79 USD →
+        </a>
+      </div>
+      <!-- ▲▲▲ FIN DEL FORMULARIO DE EJEMPLO ▲▲▲ -->
+
+      <div class="guarantee-box">
+        <span class="guarantee-icon">✦</span>
+        <p class="guarantee-text"><strong>Garantía de 7 días.</strong> Si en la primera semana sientes que este taller no es para ti, te devolvemos el dinero completo. Sin formularios complicados. Sin preguntas.</p>
+      </div>
+      <p class="form-note">Pago seguro · Acceso inmediato · En español</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+  STICKY BAR
+══════════════════════════════════════ -->
+<div id="sticky">
+  <div class="sticky-inner">
+    <div>
+      <p class="sticky-label">Liderar desde Aquí — Next Forty</p>
+      <p class="sticky-price">Early bird $79 · Solo 20 cupos disponibles</p>
+    </div>
+    <a href="#registro" class="btn btn-primary btn-sm">Inscribirme →</a>
+  </div>
+</div>
+
+</body>
+</html>
