@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Servicios para Emprendedoras | The Next Forty</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#020617;--panel:#0f172a;--text:#f8fafc;--soft:#cbd5e1;--muted:#94a3b8;--line:#334155;--pink:#ff30af}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+nav{height:86px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(51,65,85,.55)}
+.brand{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);font-weight:700}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.04em;text-transform:none;font-weight:400}
+.nav{display:flex;gap:22px;align-items:center;font-size:13px;color:var(--soft)}.pill{border:1px solid var(--line);padding:7px 10px;border-radius:8px}
+.hero{padding:105px 0 100px;background:radial-gradient(720px 390px at 8% 0%,rgba(255,48,175,.09),transparent 68%)}
+.eye{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);font-weight:700;margin-bottom:20px}
+h1,h2,h3{margin:0;letter-spacing:-.035em}h1{font-size:clamp(42px,5vw,64px);line-height:1.06;max-width:1120px}h2{font-size:clamp(30px,3vw,42px);line-height:1.18}
+.lead{font-size:20px;max-width:750px;color:var(--soft);margin:28px 0 0}.muted{color:var(--muted)}
+.btn{display:inline-block;background:var(--pink);padding:11px 18px;border-radius:9px;font-weight:700;font-size:13px}.btn.out{background:transparent;border:1px solid var(--line);color:var(--soft)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}section{padding:88px 0;border-top:1px solid rgba(51,65,85,.42)}
+.copy{max-width:790px;color:var(--soft);font-size:18px;margin-top:18px}
+.method{margin-top:38px;padding:30px;border:1px solid rgba(255,48,175,.25);border-radius:16px;background:rgba(15,23,42,.55);max-width:900px;color:var(--soft)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}.quote{padding:28px;border:1px solid var(--line);border-radius:16px;background:rgba(15,23,42,.45);min-height:220px}.quote p{margin:0;color:var(--soft)}.quote small{display:block;margin-top:22px;color:var(--muted)}
+.feature{margin-top:38px;padding:38px;border:1px solid var(--line);border-radius:18px;background:rgba(15,23,42,.5);display:grid;grid-template-columns:1fr 1fr;gap:42px}.feature h3{font-size:31px;line-height:1.2;margin:8px 0 15px}.feature p{color:var(--soft);margin:0}.meta{color:var(--muted);font-size:14px;margin-top:20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.card{padding:28px;border:1px solid var(--line);border-radius:16px;background:rgba(15,23,42,.5);min-height:340px;display:flex;flex-direction:column}.card h3{font-size:24px;line-height:1.2;margin:10px 0 14px}.card p{color:var(--soft);margin:0}.card .price{margin-top:auto;padding-top:25px;font-size:19px;font-weight:700}.link{color:var(--pink);font-weight:700;font-size:13px;margin-top:10px}
+.about{background:#240303}.aboutgrid{display:grid;grid-template-columns:.8fr 1.45fr;gap:68px;align-items:start}.portrait{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 35%;border-radius:7px}.about h2{font-family:"Libre Baskerville",serif;font-size:clamp(36px,4vw,52px);letter-spacing:-.03em;margin:8px 0 28px}.about p{color:#aeb9b5;font-size:18px;margin:0 0 20px}.credentials{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.credential{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 11px;color:#cbd5e1;font-size:12px}
+.final{text-align:center;max-width:760px;margin:auto}.final p{font-size:18px;color:var(--soft);margin:20px 0 0}.final .actions{justify-content:center}
+footer{padding:42px 0 50px;border-top:1px solid rgba(51,65,85,.5);color:var(--muted);font-size:12px}
+@media(max-width:800px){.wrap{width:min(100% - 32px,1120px)}.nav a:not(.pill){display:none}.hero{padding:72px 0}section{padding:66px 0}.feature,.aboutgrid{grid-template-columns:1fr}.quotes,.cards{grid-template-columns:1fr}.aboutgrid{gap:34px}.portrait{max-width:460px}.feature{padding:28px}}
+</style>
+<style>
+  /* Tools section: two equal cards side by side on desktop */
+  .tools-grid,
+  .tool-grid,
+  .tools-list,
+  .resources-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+    align-items: stretch !important;
+  }
+
+  .tools-grid > *,
+  .tool-grid > *,
+  .tools-list > *,
+  .resources-grid > * {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  @media (max-width: 760px) {
+    .tools-grid,
+    .tool-grid,
+    .tools-list,
+    .resources-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+<style>
+  #herramientas .tools-two{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+    margin-top:38px;
+  }
+  #herramientas .tools-two .card{
+    min-height:340px;
+    height:100%;
+  }
+  @media (max-width:760px){
+    #herramientas .tools-two{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
+<style>
+  #charlas-workshops h2{max-width:900px}
+  #charlas-workshops .copy{max-width:900px}
+  #charlas-workshops .muted{font-size:16px}
+  #sigamos-conectadas h2{max-width:760px;margin-left:auto;margin-right:auto}
+</style>
+<style>
+#metodologia-practica .quotes{grid-template-columns:repeat(2,minmax(0,1fr));}
+#metodologia-practica .closing-quote{
+  max-width:1120px;margin:34px 0 0;padding:30px 0 0;
+  border-top:1px solid rgba(255,48,175,.28);
+}
+#metodologia-practica .closing-quote p{
+  margin:0;max-width:1120px;font-family:"Libre Baskerville",serif;
+  font-size:clamp(22px,2.3vw,31px);line-height:1.45;color:#f8fafc;letter-spacing:-.02em;
+}
+#metodologia-practica .closing-quote small{
+  display:block;margin-top:18px;color:#94a3b8;
+}
+@media(max-width:800px){#metodologia-practica .quotes{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="/">The Next Forty<small>Atelier for Conscious Leadership</small></a>
+<div class="nav">
+<a class="i18n" data-en="Home" data-es="Inicio" href="/">Home</a>
+<a class="i18n" data-en="12 Weeks · One Goal" data-es="12 Semanas · Una Meta" href="/12-semanas-una-meta/">12 Weeks · One Goal</a>
+<a class="i18n" data-en="1:1 Mentorship" data-es="Mentoría 1:1" href="#mentoria">1:1 Mentorship</a>
+<a class="i18n" data-en="Short Courses &amp; Tools" data-es="Cursos &amp; herramientas" href="#herramientas">Short Courses &amp; Tools</a>
+<a class="i18n" data-en="Talks &amp; Workshops" data-es="Charlas &amp; Workshops" href="#charlas-workshops">Talks &amp; Workshops</a>
+<a class="i18n" data-en="About Tania" data-es="Tania" href="#tania">About Tania</a>
+<div class="langswitch"><button data-set-lang="en" type="button">EN</button><button data-set-lang="es" type="button">ES</button></div>
+</div></nav></div></header>
+<main>
+<div class="hero"><div class="wrap">
+<div class="eye i18n" data-en="For entrepreneurs" data-es="Para emprendedoras">For entrepreneurs</div>
+<h1 class="i18n" data-en="Your business already works.&lt;br&gt;Now it needs capacity to grow." data-es="Tu negocio ya funciona.&lt;br&gt;Ahora necesita capacidad para crecer.">Your business already works.<br/>Now it needs capacity to grow.</h1>
+<p class="lead i18n" data-en="At The Next Forty, we work with entrepreneurs whose businesses are already in motion and who need to prepare their structure for the next stage of growth." data-es="En The Next Forty trabajamos con emprendedoras que ya tienen negocios en movimiento y necesitan preparar su estructura para la próxima etapa de crecimiento.">At The Next Forty, we work with entrepreneurs whose businesses are already in motion and who need to prepare their structure for the next stage of growth.</p>
+<p class="muted i18n" data-en="We do this through operational mentorship, short courses, and practical tools, always under The Next Forty methodology." data-es="Lo hacemos a través de mentoría operativa, cursos cortos y herramientas prácticas, siempre bajo la metodología de The Next Forty." style="max-width:720px;margin-top:18px">We do this through operational mentorship, short courses, and practical tools, always under The Next Forty methodology.</p>
+<div class="actions"><a class="btn i18n" data-en="1:1 Mentorship" data-es="Mentoría 1:1" href="#mentoria">1:1 Mentorship</a><a class="btn out i18n" data-en="Short Courses &amp; Tools" data-es="Cursos &amp; herramientas" href="#herramientas">Short Courses &amp; Tools</a></div>
+</div></div>
+<section><div class="wrap"><div class="eye">The Next Forty Methodology</div>
+<h2 class="i18n" data-en="Scaling is not simply doing more." data-es="Escalar no es simplemente hacer más.">Scaling is not simply doing more.</h2>
+<p class="copy i18n" data-en="It is recognizing when the way the business works today is no longer enough to sustain what comes next." data-es="Es reconocer cuándo la forma en que el negocio funciona hoy ya no alcanza para sostener lo que viene.">It is recognizing when the way the business works today is no longer enough to sustain what comes next.</p>
+<div class="method i18n" data-en="It may be time to hire, delegate, review margins, organize processes, or prepare capacity for more clients. &lt;strong style='color:white'&gt;You do not need to start over. You need the structure of your business to reach its next stage.&lt;/strong&gt;" data-es="Puede ser el momento de contratar, delegar, revisar márgenes, ordenar procesos o preparar capacidad para más clientes. &lt;strong style='color:white'&gt;No necesitas empezar de nuevo. Necesitas que la estructura de tu negocio alcance su próxima etapa.&lt;/strong&gt;">It may be time to hire, delegate, review margins, organize processes, or prepare capacity for more clients. <strong style="color:white">You do not need to start over. You need the structure of your business to reach its next stage.</strong></div>
+</div></section>
+<section id="metodologia-practica"><div class="wrap">
+<div class="eye i18n" data-en="The methodology in practice" data-es="La metodología en la práctica">The methodology in practice</div>
+<h2 class="i18n" data-en="The business never exists separately from the person leading it." data-es="El negocio nunca existe separado de quien lo lidera.">The business never exists separately from the person leading it.</h2>
+<p class="copy i18n" data-en="The Next Forty grew from years of working alongside women entrepreneurs. The methodology connects business, entrepreneurship, social transformation, and education because growing a business is not only about knowing what to do. It also requires developing the capacity to make decisions, set boundaries, delegate, lead, and sustain what comes next." data-es="The Next Forty nació de años de trabajo acompañando a mujeres emprendedoras. La metodología conecta negocio, emprendimiento, transformación social y educación porque hacer crecer un negocio no depende solamente de saber qué hacer. También requiere desarrollar la capacidad para tomar decisiones, poner límites, delegar, liderar y sostener lo que viene.">The Next Forty grew from years of working alongside women entrepreneurs. The methodology connects business, entrepreneurship, social transformation, and education because growing a business is not only about knowing what to do. It also requires developing the capacity to make decisions, set boundaries, delegate, lead, and sustain what comes next.</p>
+<div class="quotes">
+<div class="quote">
+<p class="i18n"
+data-en="“Before we started, my only focus was simply how to hire someone, but working with you helped me explore and understand everything that having an employee really involves, from processes to the overall management of the business.&lt;br/&gt;&lt;br/&gt;I went from simply wanting to hire someone to seeing the full picture of the processes needed to take that step successfully. I created a quarterly plan that allows me to make decisions with clarity instead of at random.&lt;br/&gt;&lt;br/&gt;You helped me see areas I had not considered, allowing me to explore the growth of my business with greater confidence and control.”"
+data-es="“Antes de empezar, mi único enfoque era simplemente cómo contratar a alguien, pero contigo logré explorar y entender todo lo que realmente implica tener una empleada, desde los procesos hasta la gestión integral.&lt;br/&gt;&lt;br/&gt;Pasé de querer solo contratar a ver el panorama completo de los procesos necesarios para dar ese paso con éxito. Logré establecer una planeación trimestral que me permite tomar decisiones con claridad y no al azar.&lt;br/&gt;&lt;br/&gt;Me ayudaste a ver áreas que no había considerado, permitiéndome explorar el crecimiento de mi negocio con más seguridad y control.”">“Before we started, my only focus was simply how to hire someone, but working with you helped me explore and understand everything that having an employee really involves, from processes to the overall management of the business.<br/><br/>I went from simply wanting to hire someone to seeing the full picture of the processes needed to take that step successfully. I created a quarterly plan that allows me to make decisions with clarity instead of at random.<br/><br/>You helped me see areas I had not considered, allowing me to explore the growth of my business with greater confidence and control.”</p>
+<small>Olivia Morales · <a href="https://liivcleanservices.com/" target="_blank" rel="noopener noreferrer" style="color:var(--pink)">LiiV Clean Services ↗</a></small>
+</div>
+<div class="quote">
+<p class="i18n"
+data-en="“Before, I did not fully value my time and felt that I had to do all the cleaning myself. Then I understood that my service is worth just as much as any other trade.&lt;br/&gt;&lt;br/&gt;I learned to define what each service includes, organize my routes more effectively, and communicate my prices with confidence. Now I manage my time better, work with greater organization, and protect the profitability of my business without sacrificing quality.&lt;br/&gt;&lt;br/&gt;I share cleaning manuals that provide clearer direction to the people who step in for me in a work area.”"
+data-es="“Antes no valoraba completamente mi tiempo y sentía que debía limpiar todo. Después entendí que mi servicio vale tanto como cualquier otro oficio.&lt;br/&gt;&lt;br/&gt;Aprendí a definir qué incluye cada servicio, organizar mejor mis rutas y comunicar con seguridad mis precios. Ahora administro mejor mi tiempo, trabajo con mayor orden y protejo la rentabilidad de mi negocio sin sacrificar la calidad.&lt;br/&gt;&lt;br/&gt;Comparto manuales de limpieza que dirigen mejor a quienes me sustituyen en un área de trabajo.”">“Before, I did not fully value my time and felt that I had to do all the cleaning myself. Then I understood that my service is worth just as much as any other trade.<br/><br/>I learned to define what each service includes, organize my routes more effectively, and communicate my prices with confidence. Now I manage my time better, work with greater organization, and protect the profitability of my business without sacrificing quality.<br/><br/>I share cleaning manuals that provide clearer direction to the people who step in for me in a work area.”</p>
+<small>Andrea Cruz Castillo · <a href="https://cascleanings.com/" target="_blank" rel="noopener noreferrer" style="color:var(--pink)">CA’S CLEANING SERVICES ↗</a></small>
+</div>
+<div class="quote">
+<p class="i18n"
+data-en="“I want to talk about the impact &lt;strong&gt;The Next Forty&lt;/strong&gt; has had on my life.&lt;br/&gt;&lt;br/&gt;Tania taught me that your personal life and your self-care have to go hand in hand with your business for this to work and continue growing. &lt;strong&gt;If you are not doing well, how do you expect your business to be doing well?&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;I owe a large part of the growth I have had in my business to this. She helped me focus, get organized, and lose my fear of impostor syndrome.&lt;br/&gt;&lt;br/&gt;If you are thinking about working with her, trust that you are in the right place: &lt;strong&gt;she does not focus only on the business; she focuses on you and, eventually, on your business.&lt;/strong&gt;”"
+data-es="“Quiero hablarles del impacto que ha tenido &lt;strong&gt;The Next Forty&lt;/strong&gt; en mi vida.&lt;br/&gt;&lt;br/&gt;Tania me enseñó que tu vida personal y tu cuidado personal tienen que ir de la mano de tu negocio para que esto funcione y vaya creciendo. &lt;strong&gt;Si no estás bien tú, ¿cómo esperas que esté bien tu negocio?&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;A esto le debo gran parte del crecimiento que he tenido en mi negocio. Me ayudó a enfocarme, a organizarme y a perder el miedo al síndrome del impostor.&lt;br/&gt;&lt;br/&gt;Si están pensando en trabajar con ella, crean que están en el lugar correcto: &lt;strong&gt;no se enfoca solo en el negocio, se enfoca en ti y, eventualmente, en tu negocio.&lt;/strong&gt;”">“I want to talk about the impact <strong>The Next Forty</strong> has had on my life.<br/><br/>Tania taught me that your personal life and your self-care have to go hand in hand with your business for this to work and continue growing. <strong>If you are not doing well, how do you expect your business to be doing well?</strong><br/><br/>I owe a large part of the growth I have had in my business to this. She helped me focus, get organized, and lose my fear of impostor syndrome.<br/><br/>If you are thinking about working with her, trust that you are in the right place: <strong>she does not focus only on the business; she focuses on you and, eventually, on your business.</strong>”</p>
+<small>Celina Luna · <span class="i18n" data-en="Founder of" data-es="Fundadora de">Founder of</span> <a href="https://iksi.shop/" target="_blank" rel="noopener noreferrer" style="color:var(--pink)">IKSI ↗</a></small>
+</div>
+</div><div class="closing-quote"><p class="i18n" data-en="“The biggest change was moving from reacting to everything to making decisions with intention. I learned to look at my numbers, my time, and my capacity before saying yes to more work.”" data-es="“El cambio más grande fue pasar de reaccionar a todo a tomar decisiones con intención. Aprendí a mirar mis números, mi tiempo y mi capacidad antes de decir que sí a más trabajo.”">“The biggest change was moving from reacting to everything to making decisions with intention. I learned to look at my numbers, my time, and my capacity before saying yes to more work.”</p><small>Andrea Cruz Castillo · CA’S CLEANING SERVICES</small></div></div></div></section>
+<section id="mentoria"><div class="wrap"><div class="eye i18n" data-en="Operational Mentorship · 1:1" data-es="Mentoría Operativa · 1:1">Operational Mentorship · 1:1</div>
+<h2 class="i18n" data-en="12 Weeks. One Goal." data-es="12 Semanas. Una Meta.">12 Weeks. One Goal.</h2>
+<p class="copy i18n" data-en="A 12-week process to build the structure a concrete goal needs , protecting margin, quality, and control as your business grows." data-es="Un proceso de 12 semanas para construir la estructura que una meta concreta necesita , protegiendo margen, calidad y control mientras tu negocio crece.">A 12-week process to build the structure a concrete goal needs , protecting margin, quality, and control as your business grows.</p>
+<div class="actions"><a class="btn i18n" data-en="Explore the mentorship →" data-es="Explorar la mentoría →" href="/12-semanas-una-meta/">Explore the mentorship →</a></div>
+</div></section>
+<section id="herramientas"><div class="wrap">
+<div class="eye i18n" data-en="Herramientas" data-es="Herramientas">Herramientas</div>
+<h2 class="i18n" data-en="Herramientas para momentos reales de crecimiento." data-es="Herramientas para momentos reales de crecimiento.">Herramientas para momentos reales de crecimiento.</h2><p class="muted" style="margin-top:10px"><span data-lang-only="en">Available in Spanish · Recursos creados en español</span><span data-lang-only="es">Recursos disponibles en español</span></p>
+<p class="copy i18n" data-en="No todos los momentos necesitan doce semanas de mentoría. Algunas veces necesitas una herramienta concreta para tomar una mejor decisión y seguir avanzando." data-es="No todos los momentos necesitan doce semanas de mentoría. Algunas veces necesitas una herramienta concreta para tomar una mejor decisión y seguir avanzando.">No todos los momentos necesitan doce semanas de mentoría. Algunas veces necesitas una herramienta concreta para tomar una mejor decisión y seguir avanzando.</p>
+<div class="tools-two">
+<article class="card"><div class="eye i18n" data-en="Gratis" data-es="Gratis" style="margin:0">Gratis</div>
+<h3 class="i18n" data-en="Aprende a crear tiempo para tracción" data-es="Aprende a crear tiempo para tracción">Aprende a crear tiempo para tracción</h3>
+<p class="i18n" data-en="Una herramienta gratuita para recuperar atención y crear espacio para lo que realmente necesita avanzar en tu negocio." data-es="Una herramienta gratuita para recuperar atención y crear espacio para lo que realmente necesita avanzar en tu negocio.">Una herramienta gratuita para recuperar atención y crear espacio para lo que realmente necesita avanzar en tu negocio.</p>
+<div class="actions" style="margin-top:auto"><a class="btn i18n" data-en="Descargar gratis →" data-es="Descargar gratis →" href="https://thenextforty-co.systeme.io/freebie" rel="noopener noreferrer" target="_blank">Descargar gratis →</a></div></article>
+<article class="card"><div class="eye i18n" data-en="Contratación" data-es="Contratación" style="margin:0">Contratación</div>
+<h3 class="i18n" data-en="No contrates a lo amiga." data-es="No contrates a lo amiga.">No contrates a lo amiga.</h3>
+<p class="i18n" data-en="Una estructura clara para entrevistar y tomar decisiones de contratación cuando tu negocio está listo para sumar a alguien." data-es="Una estructura clara para entrevistar y tomar decisiones de contratación cuando tu negocio está listo para sumar a alguien.">Una estructura clara para entrevistar y tomar decisiones de contratación cuando tu negocio está listo para sumar a alguien.</p>
+<div class="price">$97</div><div class="actions" style="margin-top:auto"><a class="link i18n" data-en="Ver curso + herramienta →" data-es="Ver curso + herramienta →" href="https://thenextforty-co.systeme.io/aceb5949" rel="noopener noreferrer" target="_blank">Ver curso + herramienta →</a></div></article>
+</div></div></section>
+<section id="charlas-workshops"><div class="wrap"><div class="eye i18n" data-en="Talks &amp; Workshops" data-es="Charlas &amp; Workshops">Talks &amp; Workshops</div>
+<h2 class="i18n" data-en="I also bring The Next Forty’s work to organizations, communities, and entrepreneurship spaces." data-es="También llevo el trabajo de The Next Forty a organizaciones, comunidades y espacios de emprendimiento.">I also bring The Next Forty’s work to organizations, communities, and entrepreneurship spaces.</h2>
+<p class="copy i18n" data-en="I am available for talks, workshops, and conversations designed around the real challenges women face while growing a business: leadership, growth, money, hiring, structure, decision-making, and what it means to sustain a business while the person leading it is changing too." data-es="Estoy disponible para charlas, workshops y conversaciones diseñadas alrededor de los desafíos reales que enfrentan las mujeres que están haciendo crecer un negocio: liderazgo, crecimiento, dinero, contratación, estructura, toma de decisiones y lo que significa sostener un negocio cuando quien lo lidera también está cambiando.">I am available for talks, workshops, and conversations designed around the real challenges women face while growing a business: leadership, growth, money, hiring, structure, decision-making, and what it means to sustain a business while the person leading it is changing too.</p>
+<p class="muted i18n" data-en="Sessions can be in English or Spanish and adapted to the context and needs of each organization." data-es="Las sesiones pueden ser en español o inglés y adaptarse al contexto y a las necesidades de cada organización." style="max-width:790px;margin-top:18px">Sessions can be in English or Spanish and adapted to the context and needs of each organization.</p>
+<div class="actions"><a class="btn i18n" data-en="LET’S TALK" data-es="CONVERSEMOS" href="/#contact">LET’S TALK</a></div></div></section>
+<section class="about" id="tania"><div class="wrap"><div class="aboutgrid"><img alt="Tania Figueroa" class="portrait" src="/assets/tania-figueroa.jpg"/><div>
+<div class="eye i18n" data-en="About me" data-es="Quién soy">About me</div><h2>Tania Figueroa</h2>
+<p class="i18n" data-en="Hi, I’m Tania Figueroa, founder of The Next Forty, a space for conscious leadership and business growth for business owners. For more than twenty years, I have worked at the intersection of business, entrepreneurship, social transformation, and education." data-es="Hola, soy Tania Figueroa, fundadora de The Next Forty, un espacio de liderazgo consciente y crecimiento empresarial para dueñas de negocio. Llevo más de veinte años trabajando en el cruce entre negocios, emprendimiento, transformación social y educación.">Hi, I’m Tania Figueroa, founder of The Next Forty, a space for conscious leadership and business growth for business owners. For more than twenty years, I have worked at the intersection of business, entrepreneurship, social transformation, and education.</p>
+<p class="i18n" data-en="For much of that time, I have worked alongside women , many of them Latina and immigrant entrepreneurs , during moments when their businesses, their work, and the way they lead are changing at the same time." data-es="Durante gran parte de ese tiempo he acompañado a mujeres, muchas de ellas latinas e inmigrantes, en momentos en que su negocio, su trabajo y su forma de liderar están cambiando al mismo tiempo.">For much of that time, I have worked alongside women , many of them Latina and immigrant entrepreneurs , during moments when their businesses, their work, and the way they lead are changing at the same time.</p>
+<p class="i18n" data-en="&lt;strong style='color:#f8fafc'&gt;The Next Forty grew from that journey and, especially, from my work in organizations dedicated to supporting women entrepreneurs, such as Prospera.&lt;/strong&gt; There I worked directly with Latina immigrant entrepreneurs, coordinating programs and supporting businesses at different stages of growth." data-es="&lt;strong style='color:#f8fafc'&gt;The Next Forty nació de ese recorrido y, especialmente, de mi trabajo en organizaciones dedicadas a apoyar a mujeres emprendedoras, como Prospera.&lt;/strong&gt; Allí trabajé directamente con emprendedoras inmigrantes latinas, coordinando programas y acompañando negocios en distintas etapas de crecimiento."><strong style="color:#f8fafc">The Next Forty grew from that journey and, especially, from my work in organizations dedicated to supporting women entrepreneurs, such as Prospera.</strong> There I worked directly with Latina immigrant entrepreneurs, coordinating programs and supporting businesses at different stages of growth.</p>
+<p class="i18n" data-en="Today I bring that experience to The Next Forty to work directly with business owners who are already growing and need to build the structure and capacity to sustain what comes next." data-es="Hoy llevo esa experiencia a The Next Forty para trabajar directamente con dueñas de negocio que ya están creciendo y necesitan construir la estructura y la capacidad para sostener lo que viene.">Today I bring that experience to The Next Forty to work directly with business owners who are already growing and need to build the structure and capacity to sustain what comes next.</p>
+<div class="credentials">Publicista · Fotógrafa · Certified in Digital Marketing · M.A. Consciousness &amp; Transformative Studies</div>
+</div></div></div></section>
+<section><div class="wrap"><div class="final"><div class="eye">The Next Forty</div>
+<h2 class="i18n" data-en="What needs to change so your business can sustain its next stage?" data-es="¿Qué necesita cambiar para que tu negocio pueda sostener su próxima etapa?">What needs to change so your business can sustain its next stage?</h2>
+<p class="i18n" data-en="It may require a 12-week process. Or one concrete tool for the moment you are in today." data-es="Puede requerir un proceso de 12 semanas. O una herramienta concreta para el momento en que estás hoy.">It may require a 12-week process. Or one concrete tool for the moment you are in today.</p>
+<div class="actions"><a class="btn i18n" data-en="Explore 1:1 mentorship" data-es="Explorar mentoría 1:1" href="#mentoria">Explore 1:1 mentorship</a><a class="btn out i18n" data-en="Ver herramientas" data-es="Ver herramientas" href="#herramientas">Ver herramientas</a></div>
+</div></div></section>
+</main>
+<section class="social-follow" id="sigamos-conectadas"><div class="wrap" style="text-align:center">
+<div class="eye i18n" data-en="Stay connected" data-es="Sigamos conectadas">Stay connected</div>
+<h2 class="i18n" data-en="More conversations. More tools. Less noise." data-es="Más conversaciones. Más herramientas. Menos ruido.">More conversations. More tools. Less noise.</h2>
+<div class="social-links" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px 22px;margin:26px 0 34px">
+<a href="https://www.instagram.com/thenextforty.co/" rel="noopener" target="_blank">Instagram</a>
+<a href="https://open.spotify.com/show/5XgQEYLakbU2gqGwykfcR0?si=c542c99253054d88" rel="noopener" target="_blank">The Next Forty Podcast</a>
+<a href="https://www.youtube.com/@TheNextForty" rel="noopener" target="_blank">YouTube</a>
+<a href="https://www.linkedin.com/in/taniafigueroa/" rel="noopener" target="_blank">LinkedIn</a>
+</div>
+<div class="newsletter-box"><div class="eye i18n" data-en="Newsletter" data-es="Newsletter">Newsletter</div>
+<h3 class="i18n" data-en="Tuesday: more truth, less noise" data-es="Martes de más verdad y menos ruido">Tuesday: more truth, less noise</h3>
+<div class="actions" style="justify-content:center"><a class="btn i18n" data-en="GET THE NEWSLETTER" data-es="QUIERO RECIBIR EL NEWSLETTER" href="https://thenextforty-co.systeme.io/masverdadymenosruido" rel="noopener" target="_blank">GET THE NEWSLETTER</a></div></div>
+</div></section>
+<footer><div class="wrap"><strong style="color:#ff30af;letter-spacing:.13em">THE NEXT FORTY</strong><br/>Atelier for Conscious Leadership</div></footer>
+<script>
+(function(){
+  const KEY='tnf-language';
+  function applyLang(lang){
+    lang = lang === 'es' ? 'es' : 'en';
+    localStorage.setItem(KEY,lang);
+    document.documentElement.lang=lang;
+    document.querySelectorAll('.i18n').forEach(el=>{
+      const value=el.dataset[lang];
+      if(value!==undefined) el.innerHTML=value;
+    });
+    document.querySelectorAll('[data-lang-only]').forEach(el=>{
+      el.hidden = el.getAttribute('data-lang-only') !== lang;
+    });
+    document.querySelectorAll('[data-set-lang]').forEach(b=>{
+      b.setAttribute('aria-pressed', b.getAttribute('data-set-lang')===lang ? 'true':'false');
+    });
+  }
+  window.TNFLang=applyLang;
+  document.addEventListener('DOMContentLoaded',()=>{
+    applyLang(localStorage.getItem(KEY)||'en');
+    document.querySelectorAll('[data-set-lang]').forEach(b=>{
+      b.addEventListener('click',()=>applyLang(b.getAttribute('data-set-lang')));
+    });
+  });
+})();
+</script>
+</body></html>

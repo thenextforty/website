@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Entrevista de entrada | The Next Forty</title>
+<meta content="Cuestionario de entrada para el Programa 1:1 de Crecimiento Operativo , 12 Semanas. Una Meta." name="description"/>
+<style>
+:root{--bg:#020617;--panel:#0f172a;--panel2:#111827;--text:#f8fafc;--muted:#cbd5e1;--soft:#94a3b8;--border:#334155;--accent:#ff30af;--burgundy:#240303;--max:920px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+.wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+header{border-bottom:1px solid rgba(148,163,184,.16);background:#020617}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-links{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;padding:8px 11px;border:1px solid rgba(148,163,184,.22);border-radius:10px}
+.nav-links a:hover{color:var(--text);border-color:var(--accent)}
+@media(max-width:760px){.nav{padding:14px 0;align-items:flex-start}.nav-links{gap:7px}.nav-links a{font-size:.78rem;padding:7px 9px}}
+.brand{font-weight:800}.brand small{display:block;color:var(--soft);font-weight:400;margin-top:3px}
+.progress-wrap{position:sticky;top:0;z-index:10;background:rgba(2,6,23,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(148,163,184,.12)}
+.progress{height:4px;background:#1e293b}.bar{height:100%;width:0;background:var(--accent);transition:.2s}
+.progress-label{padding:10px 0;color:var(--soft);font-size:.82rem}
+.hero{padding:76px 0 56px}
+.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:.77rem;margin-bottom:14px}
+h1,h2,h3{line-height:1.1;letter-spacing:-.035em;margin:0 0 16px}
+h1{font-size:clamp(2.7rem,7vw,4.8rem)}h2{font-size:clamp(1.9rem,5vw,2.8rem)}h3{font-size:1.15rem}
+.lede{font-size:1.12rem;color:var(--muted);max-width:760px}
+.note{margin-top:28px;padding:20px 22px;border-left:2px solid var(--accent);background:rgba(255,48,175,.035);color:var(--muted)}
+form{padding-bottom:90px}
+.form-section{padding:50px 0;border-top:1px solid rgba(148,163,184,.17)}
+.section-head{margin-bottom:30px}.section-head p{color:var(--muted);max-width:740px}
+.question{margin:0 0 28px}
+label,.label{display:block;font-weight:700;margin-bottom:10px}
+.num{color:var(--accent);font-size:.78rem;letter-spacing:.08em;margin-right:7px}
+input[type=text],input[type=number],input[type=email],input[type=tel],textarea,select{
+ width:100%;border:1px solid var(--border);background:#0b1220;color:var(--text);border-radius:12px;padding:14px 15px;font:inherit;outline:none
+}
+input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,48,175,.08)}
+textarea{min-height:112px;resize:vertical}
+.options{display:flex;flex-wrap:wrap;gap:9px}
+.option{position:relative}
+.option input{position:absolute;opacity:0;pointer-events:none}
+.option span{display:block;padding:10px 14px;border:1px solid var(--border);border-radius:999px;color:var(--muted);cursor:pointer;background:#0b1220}
+.option input:checked+span{border-color:var(--accent);color:var(--text);background:rgba(255,48,175,.09)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.internal{background:var(--burgundy);padding:64px 0}
+.internal .card{background:rgba(2,6,23,.32);border:1px solid rgba(255,255,255,.13);border-radius:18px;padding:24px}
+.internal ul{color:var(--muted);padding-left:20px}
+details{margin-top:20px;border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:20px;background:rgba(2,6,23,.25)}
+summary{font-weight:800;cursor:pointer}
+.matrix{display:grid;gap:9px;margin-top:20px}
+.matrix-row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.matrix-row select{width:155px}
+.services{overflow:auto;margin-top:20px}
+table{width:100%;border-collapse:collapse;min-width:780px}
+th,td{text-align:left;padding:11px 8px;border-bottom:1px solid rgba(255,255,255,.12);vertical-align:top}
+th{font-size:.78rem;color:var(--soft);text-transform:uppercase;letter-spacing:.05em}
+td input,td select{min-width:130px}
+.submit{padding:60px 0;text-align:center}
+.btn{border:0;background:var(--accent);color:#170312;padding:15px 26px;border-radius:12px;font:inherit;font-weight:850;cursor:pointer}
+.submit p{color:var(--soft);font-size:.9rem}
+.result{display:none;margin:25px auto 0;max-width:650px;padding:20px;border:1px solid var(--border);border-radius:14px;color:var(--muted)}
+footer{padding:30px 0 50px;border-top:1px solid rgba(148,163,184,.14);color:var(--soft);font-size:.85rem}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}.matrix-row{grid-template-columns:1fr}.matrix-row select{width:100%}.hero{padding-top:55px}}
+@media print{.progress-wrap,.submit,header{display:none}.internal{background:white;color:black}.internal .card{border:1px solid #bbb}.internal ul,.section-head p,.lede,.note{color:#333}body{background:white;color:black}input,textarea,select{border:1px solid #aaa!important;color:black!important;background:white!important}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap nav">
+<a class="brand" href="/" style="color:inherit;text-decoration:none">The Next Forty<small>Atelier for Conscious Leadership</small></a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/">Home</a>
+<a href="/servicios-emprendedoras/">Servicios</a>
+<a href="/12-semanas-una-meta/">12 Semanas · Una Meta</a>
+</nav>
+</div></header>
+<div class="progress-wrap"><div class="progress"><div class="bar" id="bar"></div></div><div class="wrap progress-label"><span id="progressText">Comenzando</span></div></div>
+<main>
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Programa 1:1 · 12 Semanas. Una Meta.</div>
+<h1>Entrevista de entrada</h1>
+<p class="lede">Este cuestionario me ayuda a entender cómo funciona tu negocio hoy, qué quieres cambiar y si este es el momento adecuado para trabajar juntas durante las próximas 12 semanas.</p>
+<div class="note">No necesitas tener todo resuelto para responder. Prefiero una respuesta real a una respuesta perfecta. Si no sabes un número exacto, puedes darme una estimación.</div>
+</div></section>
+<form id="intake">
+<div class="wrap">
+<section class="form-section">
+<div class="section-head"><div class="eyebrow">Antes de comenzar</div><h2>Sobre ti y tu negocio</h2></div>
+<div class="grid2">
+<div class="question"><label>Nombre</label><input name="first_name" required="" type="text"/></div>
+<div class="question"><label>Apellido</label><input name="last_name" required="" type="text"/></div>
+<div class="question"><label>Email</label><input name="email" required="" type="email"/></div>
+<div class="question"><label>Teléfono</label><input name="telefono" type="tel"/></div>
+<div class="question"><label>Nombre del negocio</label><input name="negocio" required="" type="text"/></div>
+<div class="question"><label>Website o redes sociales</label><input name="web" type="text"/></div>
+</div>
+</section>
+<section class="form-section"><div class="section-head"><div class="eyebrow">A · Estado actual</div><h2>¿Cómo funciona tu negocio hoy?</h2></div>
+<div class="question"><label><span class="num">01</span>¿Cuántos clientes activos tienes hoy?</label><input name="a1" type="text"/></div><div class="question"><label><span class="num">02</span>¿Cuántos son recurrentes (semanal, quincenal, mensual o por contrato)?</label><input name="a2" type="text"/></div><div class="question"><label><span class="num">03</span>¿Cuántos trabajos, proyectos o ventas realizas tú personalmente por semana?</label><input name="a3" type="text"/></div><div class="question"><label><span class="num">04</span>¿Cuántas horas a la semana trabajas produciendo o entregando el servicio/producto?</label><input name="a4" type="text"/></div><div class="question"><label><span class="num">05</span>¿Cuántas horas a la semana trabajas administrando: cotizando, comprando, respondiendo mensajes, facturando?</label><input name="a5" type="text"/></div><div class="question"><label><span class="num">06</span>¿Qué servicios o productos vendes hoy exactamente?</label><textarea name="a6"></textarea></div><div class="question"><label><span class="num">07</span>¿Cuál te deja más dinero (mejor margen)?</label><textarea name="a7"></textarea></div><div class="question"><label><span class="num">08</span>¿Cuál te deja más cansancio y menos margen?</label><textarea name="a8"></textarea></div><div class="question"><label><span class="num">09</span>¿Tienes precios escritos o cotizas caso por caso?</label><input name="a9" type="text"/></div><div class="question"><label><span class="num">10</span>¿Cuántos trabajos o clientes has rechazado en los últimos 30 días por falta de tiempo o capacidad?</label><input name="a10" type="text"/></div></section>
+<section class="form-section"><div class="section-head"><div class="eyebrow">B · Números básicos</div><h2>Necesito entender los números, aunque sean aproximados.</h2></div><div class="question"><label><span class="num">01</span>¿Cuánto vendiste el mes pasado?</label><input name="b1" type="text"/></div><div class="question"><label><span class="num">02</span>¿Cuánto gastaste en materiales, insumos o inventario?</label><input name="b2" type="text"/></div><div class="question"><label><span class="num">03</span>¿Cuánto gastaste en transporte, gasolina o logística?</label><input name="b3" type="text"/></div><div class="question"><label><span class="num">04</span>¿Cuánto pagaste en ayuda externa (empleados, contratistas, freelancers)?</label><input name="b4" type="text"/></div><div class="question"><label><span class="num">05</span>¿Cuánto quedó realmente para ti (ganancia neta)?</label><input name="b5" type="text"/></div><div class="question"><label><span class="num">06</span>¿Sabes cuánto ganas por hora real, incluyendo traslado, compras y administración?</label><textarea name="b6"></textarea></div><div class="question"><label><span class="num">07</span>¿Tienes cuenta bancaria separada para el negocio?</label><textarea name="b7"></textarea></div><div class="question"><label><span class="num">08</span>¿Qué sistema usas para tus finanzas (QuickBooks, Wave, Excel, Google Sheets, ninguno)?</label><textarea name="b8"></textarea></div><div class="question"><label><span class="num">09</span>¿Emites invoices o facturas formales?</label><input name="b9" type="text"/></div><div class="question"><label><span class="num">10</span>¿Tienes seguro de responsabilidad civil (liability insurance)?</label><input name="b10" type="text"/></div></section>
+<section class="form-section"><div class="section-head"><div class="eyebrow">C · Producto, servicio y operación</div><h2>Calidad y consistencia</h2></div><div class="question"><label><span class="num">01</span>¿Tienes un checklist o estándar por tipo de servicio o producto?</label><input name="c1" type="text"/></div><div class="question"><label><span class="num">02</span>¿Verificas la calidad antes de entregar (fotos, revisión, control de calidad)?</label><input name="c2" type="text"/></div><div class="question"><label><span class="num">03</span>¿Quién revisa la calidad antes de que el cliente reciba el resultado final?</label><input name="c3" type="text"/></div><div class="question"><label><span class="num">04</span>¿Has tenido que corregir o rehacer un trabajo por errores de calidad?</label><input name="c4" type="text"/></div><div class="question"><label><span class="num">05</span>¿Cuántas veces en los últimos 30 días?</label><input name="c5" type="text"/></div><div class="question"><label><span class="num">06</span>¿Tienes una lista fija de materiales, insumos o herramientas que siempre usas?</label><textarea name="c6"></textarea></div><div class="question"><label><span class="num">07</span>¿Tienes kits o procesos preparados, o improvisas según el trabajo?</label><textarea name="c7"></textarea></div><div class="question"><label><span class="num">08</span>¿Tienes reglas claras de qué incluye y qué no incluye cada servicio o producto?</label><textarea name="c8"></textarea></div><div class="question"><label><span class="num">09</span>¿Tienes política de cancelación?</label><input name="c9" type="text"/></div><div class="question"><label><span class="num">10</span>¿Tienes política para cambios de alcance o pedidos fuera de lo acordado?</label><input name="c10" type="text"/></div></section>
+<section class="form-section"><div class="section-head"><div class="eyebrow">D · Capacidad</div><h2>Delegar o contratar</h2></div><div class="question"><label><span class="num">01</span>¿Qué parte de tu trabajo ya podrías enseñarle a alguien más?</label><textarea name="d1"></textarea></div><div class="question"><label><span class="num">02</span>¿Qué parte todavía solo sabes hacer tú?</label><textarea name="d2"></textarea></div><div class="question"><label><span class="num">03</span>¿Tienes a alguien de confianza que podrías entrenar?</label><input name="d3" type="text"/></div><div class="question"><label><span class="num">04</span>¿Puedes pagar una prueba corta (4–6 horas o un proyecto pequeño) sin afectar tu flujo de caja?</label><input name="d4" type="text"/></div><div class="question"><label><span class="num">05</span>¿Tienes claridad legal sobre contratación, subcontratación o nómina (payroll)?</label><input name="d5" type="text"/></div><div class="question"><label><span class="num">06</span>¿Estás dispuesto/a a documentar tu forma de trabajar?</label><textarea name="d6"></textarea></div><div class="question"><label><span class="num">07</span>¿Puedes corregir a alguien sin tener que hacerlo todo tú mismo/a?</label><textarea name="d7"></textarea></div><div class="question"><label><span class="num">08</span>¿Puedes distinguir entre “alguien que me ayuda” y “alguien que representa mi marca frente al cliente”?</label><textarea name="d8"></textarea></div><div class="question"><label><span class="num">09</span>¿Estás listo/a para perder algo de velocidad durante 2–3 semanas mientras entrenas a alguien?</label><input name="d9" type="text"/></div><div class="question"><label><span class="num">10</span>¿Tienes suficiente demanda (clientes o pipeline) para justificar contratar ayuda?</label><input name="d10" type="text"/></div></section>
+<section class="form-section"><div class="section-head"><div class="eyebrow">E · Patrones y punto ciego</div><h2>Lo que los números no muestran.</h2><p>Si un negocio ya genera dinero y no ha logrado escalar, rara vez es solo por falta de información. Estas preguntas buscan entender qué se está repitiendo y qué puede estar sosteniendo el límite actual.</p></div><div class="question"><label><span class="num">01</span>¿Qué has intentado ya para resolver esto que no funcionó? ¿Por qué crees que no funcionó?</label><textarea name="e1"></textarea></div><div class="question"><label><span class="num">02</span>¿Qué evitas hacer en tu negocio aunque sepas que deberías hacerlo?</label><textarea name="e2"></textarea></div><div class="question"><label><span class="num">03</span>¿Qué te da miedo que pase si subes tus precios o si delegas una parte del trabajo?</label><textarea name="e3"></textarea></div><div class="question"><label><span class="num">04</span>¿Qué patrón ves que se repite en cómo tomas decisiones en el negocio?</label><textarea name="e4"></textarea></div><div class="question"><label><span class="num">05</span>¿A quién le has pedido ayuda para esto antes y qué pasó?</label><textarea name="e5"></textarea></div><div class="question"><label><span class="num">06</span>¿Qué te enseñaron de niño/a sobre el dinero, el trabajo o el éxito que todavía sigues sin cuestionar?</label><textarea name="e6"></textarea></div><div class="question"><label><span class="num">07</span>Si tu negocio no creciera nunca más de lo que está hoy, ¿qué crees que te costaría eso a ti, no solo al negocio?</label><textarea name="e7"></textarea></div><div class="question"><label><span class="num">08</span>Si solo pudieras resolver una cosa en las próximas 12 semanas, ¿cuál sería y por qué esa y no otra?</label><textarea name="e8"></textarea></div></section>
+</div>
+<section class="internal">
+<div class="wrap">
+<div class="eyebrow">Ficha de diagnóstico</div><h2>Documentos, sistemas y mapa del negocio</h2>
+<p style="color:var(--muted)">Esta parte puede completarse durante o después de la entrevista.</p>
+<details>
+<summary>Documentos y sistemas · Sí / No / Parcial</summary>
+<div class="matrix"><div class="matrix-row"><span>Licencia de negocio</span><select name="doc1"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Seguro de responsabilidad civil</span><select name="doc2"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>EIN</span><select name="doc3"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Cuenta bancaria separada del negocio</span><select name="doc4"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Contrato o términos de servicio</span><select name="doc5"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Invoice template</span><select name="doc6"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Quote / cotización template</span><select name="doc7"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Sistema para registrar pagos</span><select name="doc8"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Registro o base de clientes (CRM, aunque sea simple)</span><select name="doc9"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Calendario digital</span><select name="doc10"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Presencia digital (web, Google Business Profile, redes sociales)</span><select name="doc11"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Reviews o testimonios</span><select name="doc12"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Fotos o evidencia real del trabajo/producto</span><select name="doc13"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Lista de precios</span><select name="doc14"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Paquetes o líneas de servicio/producto definidos</span><select name="doc15"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Checklist de calidad por servicio o producto</span><select name="doc16"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Manual de entrenamiento u onboarding</span><select name="doc17"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Estándar de presentación (uniforme, imagen, empaque, comunicación)</span><select name="doc18"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Política de acceso, privacidad o manejo de información del cliente</span><select name="doc19"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Política de manejo de daños, errores o reclamos</span><select name="doc20"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div><div class="matrix-row"><span>Inventario o control de insumos/materiales</span><select name="doc21"><option value="">—</option><option value="Sí">Sí</option><option value="No">No</option><option value="Parcial">Parcial</option></select></div></div>
+</details>
+<details>
+<summary>Mapa de servicios o productos</summary>
+<div class="services"><table><thead><tr><th>Servicio / producto</th><th>Frecuencia</th><th>Precio</th><th>Margen estimado</th><th>Clasificación</th></tr></thead><tbody><tr><td><input name="servicio1"/></td><td><input name="frecuencia1"/></td><td><input name="precio1"/></td><td><input name="margen1"/></td><td><select name="clasificacion1"><option value="">—</option><option value="Sí lo ofrece y deja margen.">Sí lo ofrece y deja margen.</option><option value="Sí lo ofrece pero no deja margen.">Sí lo ofrece pero no deja margen.</option><option value="Lo ofrece pero no está estandarizado.">Lo ofrece pero no está estandarizado.</option><option value="No lo debe ofrecer todavía.">No lo debe ofrecer todavía.</option><option value="Puede convertirse en extra / premium.">Puede convertirse en extra / premium.</option></select></td></tr><tr><td><input name="servicio2"/></td><td><input name="frecuencia2"/></td><td><input name="precio2"/></td><td><input name="margen2"/></td><td><select name="clasificacion2"><option value="">—</option><option value="Sí lo ofrece y deja margen.">Sí lo ofrece y deja margen.</option><option value="Sí lo ofrece pero no deja margen.">Sí lo ofrece pero no deja margen.</option><option value="Lo ofrece pero no está estandarizado.">Lo ofrece pero no está estandarizado.</option><option value="No lo debe ofrecer todavía.">No lo debe ofrecer todavía.</option><option value="Puede convertirse en extra / premium.">Puede convertirse en extra / premium.</option></select></td></tr><tr><td><input name="servicio3"/></td><td><input name="frecuencia3"/></td><td><input name="precio3"/></td><td><input name="margen3"/></td><td><select name="clasificacion3"><option value="">—</option><option value="Sí lo ofrece y deja margen.">Sí lo ofrece y deja margen.</option><option value="Sí lo ofrece pero no deja margen.">Sí lo ofrece pero no deja margen.</option><option value="Lo ofrece pero no está estandarizado.">Lo ofrece pero no está estandarizado.</option><option value="No lo debe ofrecer todavía.">No lo debe ofrecer todavía.</option><option value="Puede convertirse en extra / premium.">Puede convertirse en extra / premium.</option></select></td></tr><tr><td><input name="servicio4"/></td><td><input name="frecuencia4"/></td><td><input name="precio4"/></td><td><input name="margen4"/></td><td><select name="clasificacion4"><option value="">—</option><option value="Sí lo ofrece y deja margen.">Sí lo ofrece y deja margen.</option><option value="Sí lo ofrece pero no deja margen.">Sí lo ofrece pero no deja margen.</option><option value="Lo ofrece pero no está estandarizado.">Lo ofrece pero no está estandarizado.</option><option value="No lo debe ofrecer todavía.">No lo debe ofrecer todavía.</option><option value="Puede convertirse en extra / premium.">Puede convertirse en extra / premium.</option></select></td></tr><tr><td><input name="servicio5"/></td><td><input name="frecuencia5"/></td><td><input name="precio5"/></td><td><input name="margen5"/></td><td><select name="clasificacion5"><option value="">—</option><option value="Sí lo ofrece y deja margen.">Sí lo ofrece y deja margen.</option><option value="Sí lo ofrece pero no deja margen.">Sí lo ofrece pero no deja margen.</option><option value="Lo ofrece pero no está estandarizado.">Lo ofrece pero no está estandarizado.</option><option value="No lo debe ofrecer todavía.">No lo debe ofrecer todavía.</option><option value="Puede convertirse en extra / premium.">Puede convertirse en extra / premium.</option></select></td></tr><tr><td><input name="servicio6"/></td><td><input name="frecuencia6"/></td><td><input name="precio6"/></td><td><input name="margen6"/></td><td><select name="clasificacion6"><option value="">—</option><option value="Sí lo ofrece y deja margen.">Sí lo ofrece y deja margen.</option><option value="Sí lo ofrece pero no deja margen.">Sí lo ofrece pero no deja margen.</option><option value="Lo ofrece pero no está estandarizado.">Lo ofrece pero no está estandarizado.</option><option value="No lo debe ofrecer todavía.">No lo debe ofrecer todavía.</option><option value="Puede convertirse en extra / premium.">Puede convertirse en extra / premium.</option></select></td></tr></tbody></table></div>
+</details>
+<details>
+<summary>Criterio de viabilidad · uso interno</summary>
+<div class="card">
+<p>El negocio está listo para el programa de 12 semanas si cumple al menos lo siguiente, sin importar la cifra de facturación:</p>
+<ul>
+<li>5 a 8 clientes activos o flujo constante de leads/prospectos.</li>
+<li>Capacidad de medir ingresos y gastos básicos.</li>
+<li>Disposición a subir precios donde no hay margen.</li>
+<li>Disposición a documentar su método.</li>
+<li>Al menos 1 servicio o producto repetible y escalable.</li>
+<li>Mínimo 3–5 horas semanales disponibles para trabajar SOBRE el negocio, no solo DENTRO de él.</li>
+</ul>
+<p>Si el negocio no cumple lo anterior, se considera primero una fase de orden financiero y operativo y luego se reevalúa el ingreso al programa de 12 semanas.</p>
+</div>
+</details>
+</div>
+</section>
+<div class="wrap submit">
+<button class="btn" id="submitIntake" type="button">Enviar entrevista de entrada</button>
+<p>Completar este cuestionario no te compromete a participar en el programa.</p>
+<div class="result" id="result"></div>
+</div>
+</form>
+</main>
+<footer><div class="wrap">The Next Forty · Atelier for Conscious Leadership</div></footer>
+<script>
+(function(){
+  const WEB_APP_URL='https://script.google.com/macros/s/AKfycbw2BNHeYE2FFiodKFeoJjVo9tXteGa-cNZwG1JDq0PboZXgj-7ULguHr79PYL7OIxHoJg/exec';
+
+  const intake=document.getElementById('intake');
+  if(!intake)return;
+
+  const bar=document.getElementById('bar');
+  const pt=document.getElementById('progressText');
+  const result=document.getElementById('result');
+  const submitBtn=document.getElementById('submitIntake');
+
+  function field(name){
+    return intake.querySelector('[name="'+name+'"]');
+  }
+
+  function value(name){
+    const el=field(name);
+    return el ? String(el.value||'').trim() : '';
+  }
+
+  function progress(){
+    const fields=[...intake.querySelectorAll('input,textarea,select')].filter(x=>x.type!=='hidden');
+    const done=fields.filter(x=>String(x.value||'').trim()).length;
+    const pct=fields.length ? Math.round(done/fields.length*100) : 0;
+    if(bar)bar.style.width=pct+'%';
+    if(pt)pt.textContent=pct?pct+'% completado':'Comenzando';
+  }
+
+  function validateRequired(){
+    const required=[...intake.querySelectorAll('[required]')];
+    for(const el of required){
+      if(!el.checkValidity()){
+        el.reportValidity();
+        el.scrollIntoView({behavior:'smooth',block:'center'});
+        try{ el.focus({preventScroll:true}); }catch(e){ el.focus(); }
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function buildPayload(){
+    const data={
+      'First Name': value('first_name'),
+      'Last Name': value('last_name'),
+      'Email': value('email'),
+      'Phone': value('telefono'),
+      'Business Name': value('negocio'),
+      'Website / Social': value('web')
+    };
+
+    for(let i=1;i<=10;i++) data['A'+i]=value('a'+i);
+    for(let i=1;i<=10;i++) data['B'+i]=value('b'+i);
+    for(let i=1;i<=10;i++) data['C'+i]=value('c'+i);
+    for(let i=1;i<=10;i++) data['D'+i]=value('d'+i);
+    for(let i=1;i<=8;i++) data['E'+i]=value('e'+i);
+
+    const docs=[
+      'Business License','Liability Insurance','EIN','Separate Bank Account',
+      'Contract or Terms','Invoice Template','Quote Template','Payment Recording System',
+      'CRM or Client Base','Digital Calendar','Digital Presence','Reviews or Testimonials',
+      'Photos or Evidence','Price List','Packages or Product Lines','Quality Checklist',
+      'Training or Onboarding Manual','Presentation Standard','Privacy or Access Policy',
+      'Damage Error or Complaint Policy','Inventory or Material Control'
+    ];
+
+    docs.forEach((header,index)=>{
+      data[header]=value('doc'+(index+1));
+    });
+
+    for(let i=1;i<=6;i++){
+      data['Service '+i]=value('servicio'+i);
+      data['Frequency '+i]=value('frecuencia'+i);
+      data['Price '+i]=value('precio'+i);
+      data['Estimated Margin '+i]=value('margen'+i);
+      data['Classification '+i]=value('clasificacion'+i);
+    }
+
+    return data;
+  }
+
+  function showResult(message,ok){
+    if(!result)return;
+    result.style.display='block';
+    result.style.borderColor=ok?'#ff30af':'#ef4444';
+    result.style.color=ok?'#cbd5e1':'#fecaca';
+    result.textContent=message;
+    result.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  intake.addEventListener('input',progress);
+  intake.addEventListener('change',progress);
+
+  if(submitBtn){
+    submitBtn.addEventListener('click',async function(){
+      if(!validateRequired())return;
+
+      const payload=buildPayload();
+
+      submitBtn.disabled=true;
+      submitBtn.textContent='Enviando...';
+      if(result)result.style.display='none';
+
+      try{
+        await fetch(WEB_APP_URL,{
+          method:'POST',
+          mode:'no-cors',
+          headers:{'Content-Type':'text/plain;charset=utf-8'},
+          body:JSON.stringify(payload)
+        });
+
+        showResult(
+          'Gracias. Tu entrevista de entrada fue enviada. Tania revisará la información antes de confirmar los próximos pasos.',
+          true
+        );
+
+        submitBtn.textContent='Entrevista enviada';
+
+      }catch(error){
+        console.error(error);
+
+        showResult(
+          'No pude enviar la entrevista. Por favor, intenta nuevamente. Si el problema continúa, no cierres esta página para no perder tus respuestas.',
+          false
+        );
+
+        submitBtn.disabled=false;
+        submitBtn.textContent='Enviar entrevista de entrada';
+      }
+    });
+  }
+
+  progress();
+})();
+</script>
+</body>
+</html>
